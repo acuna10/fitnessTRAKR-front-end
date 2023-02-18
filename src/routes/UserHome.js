@@ -1,12 +1,7 @@
 import UserHomeCss from "../css/Home.module.css"
 import { Navigate } from "react-router-dom";
 import { useEffect, } from "react";
-
-
 const UserHome = ({ setUser, user }) => {
-
-
-
     const nameTheUser = () => {
         setUser(localStorage.getItem('user'))
     };
@@ -20,5 +15,4 @@ const UserHome = ({ setUser, user }) => {
             </div> : <Navigate to='/' />
     )
 };
-
 export default UserHome

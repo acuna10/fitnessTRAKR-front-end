@@ -1,6 +1,6 @@
 import { updateRoutineActivity } from '../Api.fetch'
 import { Link } from 'react-router-dom';
-import EditRaCss from '../css/EditRoutineAct.module.css'
+import EditRoutineActCss from './css/EditRoutineAct.module.css'
 import { useEffect } from 'react';
 
 const EditRoutineActivity = ({ activityId, setUser, actName, setCount, setDur, count, dur }) => {
@@ -10,16 +10,16 @@ const EditRoutineActivity = ({ activityId, setUser, actName, setCount, setDur, c
     // eslint-disable-next-line
     useEffect(() => { nameTheUser() }, []);
     return (<>
-        <div className={EditRaCss.title} >
+        <div className={EditRoutineActCss.title} >
             <h1>{actName}</h1>
         </div>
 
-        <div className={EditRaCss.container}>
+        <div className={EditRoutineActCss.container}>
 
-            <form className={EditRaCss.form}>
+            <form className={EditRoutineActCss.form}>
 
-                <div className={EditRaCss.cdInputs}>
-                    <h3 className={EditRaCss.title}>Count</h3>
+                <div className={EditRoutineActCss.cdInputs}>
+                    <h3 className={EditRoutineActCss.title}>Count</h3>
                     <input
                         value={count}
                         placeholder={`${count}`}
@@ -27,8 +27,8 @@ const EditRoutineActivity = ({ activityId, setUser, actName, setCount, setDur, c
                     </input>
                 </div>
 
-                <div className={EditRaCss.cdInputs}>
-                    <h3 className={EditRaCss.title}>Duration</h3>
+                <div className={EditRoutineActCss.cdInputs}>
+                    <h3 className={EditRoutineActCss.title}>Duration</h3>
                     <input
                         value={dur}
                         placeholder={`${dur}`}
@@ -36,9 +36,9 @@ const EditRoutineActivity = ({ activityId, setUser, actName, setCount, setDur, c
                     </input>
                 </div>
 
-                <div className={EditRaCss.subDiv}>
+                <div className={EditRoutineActCss.subDiv}>
                     <Link to='/routines-user'
-                        className={EditRaCss.submit}
+                        className={EditRoutineActCss.submit}
                         onMouseDown={() => {
                             updateRoutineActivity(
                                 activityId,

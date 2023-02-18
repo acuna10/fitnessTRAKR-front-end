@@ -66,12 +66,13 @@ const AddActivity = ({ routineId, routineName, setUser, setRoutineName }) => {
                             }) : null}
                         </select>
                     </div>
-                    <Link
-                        to='/routines-user'
-                        className={AddActivityCss.Link}
-                        onMouseDown={() => { addActivity(routineId, parseInt(value), parseInt(count), parseInt(dur)) }}>
-                        <h3
-                            className={AddActivityCss.words}>Add</h3></Link>
+                    <div className={AddActivityCss.subDiv}>
+                        <Link
+                            to='/routines-user'
+                            className={AddActivityCss.submit}
+                            onMouseDown={() => { addActivity(routineId, parseInt(value), parseInt(count), parseInt(dur)) }}>
+                            Add</Link>
+                    </div>
                 </form>
             </div>
         </>

@@ -1,11 +1,9 @@
 import React, { useState } from "react"
 import { register } from "../Api.fetch"
 
-
 const RegisterPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
     return (<div className="body">
 
         <form className="create-account form" onSubmit={async (event) => {
@@ -29,10 +27,8 @@ const RegisterPage = () => {
 
             </input>
             <button className="register-button">submit</button>
-
         </form>
     </div>
     )
 };
-
 export default RegisterPage

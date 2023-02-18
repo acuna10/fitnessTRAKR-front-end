@@ -2,7 +2,6 @@ import { Navigate } from 'react-router-dom';
 import HomeCss from '../css/Home.module.css'
 
 const Home = ({ user }) => {
-
     return (user ? <Navigate to='/user' /> :
         <div className={HomeCss.container}>
             <div>
@@ -14,5 +13,4 @@ const Home = ({ user }) => {
         </div>
     )
 };
-
 export default Home

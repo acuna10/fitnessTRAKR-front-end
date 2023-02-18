@@ -1,21 +1,15 @@
-import { useState } from "react"
-import { createRoutine } from '../Api.fetch'
-import { Link } from "react-router-dom";
-import EditCss from "../css/Edit.module.css"
-const CreateRoutine = () => {
+import { Link } from "react-router-dom"
+import { useState } from "react";
+import EditCss from '../css/Edit.module.css'
+import { CreateActivity } from "../Api.fetch";
+
+
+const createActivity = () => {
     const [name, setName] = useState('');
-    const [goal, setGoal] = useState('');
-    const [isPublic, setIsPublic] = useState(false);
-    console.log(isPublic)
-
-    const handleChange = () => {
-        setIsPublic(!isPublic);
-    };
-
-
+    const [desc, setDesc] = useState('');
     return (<>
         <div className={EditCss.title} >
-            <h1>Create Routine</h1>
+            <h1>Create Activity</h1>
         </div>
         <div className={EditCss.container}>
 
@@ -32,36 +26,28 @@ const CreateRoutine = () => {
 
 
                 <div className={EditCss.cdInputs}>
-                    <h3 className={EditCss.title}>Goal</h3>
+                    <h3 className={EditCss.title}>Description</h3>
                     <input
-                        value={goal}
-                        placeholder='goal..'
-                        onChange={event => setGoal(event.target.value)}>
+                        value={desc}
+                        placeholder='description..'
+                        onChange={event => setDesc(event.target.value)}>
 
                     </input>
                 </div>
 
-                <div>
-                    <label>
-                        public
-                        <input type="checkbox"
-                            checked={isPublic}
-                            onChange={handleChange} />
-                    </label>
-                </div>
                 <div className={EditCss.subDiv}>
                     <Link to='/routines-user'
                         className={EditCss.submit}
                         onMouseDown={async (event) => {
                             event.preventDefault()
                             try {
-                                await createRoutine({ name, goal, isPublic })
+                                await CreateActivity(name, desc)
                             } catch (e) {
                                 console.error(e)
                             } finally {
                                 setName('')
-                                setGoal('')
-                                setIsPublic(false)
+                                setDesc('')
+
                             }
                         }}>Create</Link>
                 </div>
@@ -70,4 +56,4 @@ const CreateRoutine = () => {
     </>)
 }
 
-export default CreateRoutine;
+export default createActivity;

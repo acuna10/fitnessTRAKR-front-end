@@ -1,8 +1,8 @@
 .container {
     display: flex;
     justify-content: center;
-    height: 95vh;
+    height: 100vh;
     overflow-y: scroll;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
 }

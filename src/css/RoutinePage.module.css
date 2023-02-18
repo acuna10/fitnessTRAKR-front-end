@@ -2,7 +2,17 @@
     display: flex;
     justify-content: center;
 }
-
+.activities {
+    border-top: solid;
+    border-color: lightgreen;
+    margin-bottom: 1em;
+}
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
 .routine {
     border-style: solid;
     border-color: cornflowerblue;
@@ -10,19 +20,5 @@
     margin: .5em;
     padding: .5em;
     box-shadow: 10px 10px 5px lightblue;
-    background-color: rgb(226, 242, 249);
-
-}
-
-.activities {
-    border-top: solid;
-    border-color: cornflowerblue;
-    margin-bottom: .5em;
-}
-
-.container {
-    height: 95vh;
-    overflow-y: scroll;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    background-color: lightblue;
 }

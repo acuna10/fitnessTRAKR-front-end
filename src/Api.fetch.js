@@ -1,5 +1,4 @@
 const URL = "http://fitnesstrac-kr.herokuapp.com/api/"
-
 export let token = localStorage.getItem('token')
 
 export const register = async (username, password) => {
@@ -23,9 +22,7 @@ export const register = async (username, password) => {
     }
 
 }
-
 export const login = async (username, password) => {
-
     try {
         const resp = await fetch(`${URL}users/login`, {
             method: "POST",
@@ -42,15 +39,13 @@ export const login = async (username, password) => {
         localStorage.setItem('token', data.token)
 
         return data
+
     } catch (error) {
         console.error(error)
     }
 }
-
-export const isUser = async (token) => {
-
+export const isUser = async (token) => 
     try {
-
         const resp = await fetch(`${URL}users/me`, {
             headers: {
                 'Content-Type': 'application/json',
@@ -63,29 +58,22 @@ export const isUser = async (token) => {
             return data
         }
         return false
+
     } catch (error) {
         console.error(error)
     }
-}
+};
 
 export const showUsersRoutines = async (username) => {
-
     const resp = await fetch(`${URL}users/${username}/routines`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${localStorage.getItem('token')}`
-
         },
     })
-
     const data = await resp.json();
-
-
-
     return data
 };
-
-
 export const showActivites = async () => {
     try {
         const resp = await fetch(`${URL}activities`, {
@@ -93,17 +81,13 @@ export const showActivites = async () => {
                 'Content-Type': 'application/json',
             },
         })
-
         const data = await resp.json()
-
-
-
         return data
+
     } catch (error) {
         console.error(error)
     }
 };
-
 export const createActiviy = async (name, desc) => {
     try {
         const resp = await fetch(`${URL}activities`, {
@@ -113,15 +97,14 @@ export const createActiviy = async (name, desc) => {
                 description: `${desc}`
             })
         })
-
         const data = await resp.json()
         console.log(data)
         return data
+
     } catch (error) {
         console.error(error)
     }
 };
-
 export const updateActivity = async (id, name, desc) => {
     try {
         const resp = await fetch(`${URL}activities/${id}`, {
@@ -131,11 +114,10 @@ export const updateActivity = async (id, name, desc) => {
                 description: `${desc}`
             })
         });
-
         const data = await resp.json();
-
         console.log(data);
         return data;
+
     } catch (error) {
         console.error(error);
     }
@@ -165,12 +147,9 @@ export const pubRoutines = async () => {
                 'Content-Type': 'application/json',
             },
         });
-
         const data = await resp.json();
-
-
-
         return data;
+
     } catch (error) {
         console.error(error)
     }
@@ -190,17 +169,14 @@ export const createRoutine = async ({ name, goal, isPublic }) => {
                 isPublic: isPublic
             })
         })
-
         const data = await resp.json();
-
         console.log(data);
-
         return data;
+
     } catch (error) {
         console.error(error);
     }
 };
-
 export const updateRoutine = async (id, name, goal, isPublic) => {
     try {
         const resp = await fetch(`${URL}routines/${id}`, {
@@ -216,11 +192,8 @@ export const updateRoutine = async (id, name, goal, isPublic) => {
             })
         })
         const data = await resp.json();
-
         console.log(data);
-
         return data;
-
 
     } catch (error) {
         console.error(error)
@@ -236,11 +209,8 @@ export const deleteRoutine = async (id) => {
                 'Authorization': `Bearer ${token}`
             }
         })
-
         const data = await resp.json();
-
         console.log(data);
-
         return data;
 
     } catch (error) {
@@ -264,11 +234,8 @@ export const addActivity = async (id, actId, count, duration) => {
                 duration: duration
             })
         });
-
         const data = await resp.json();
-
         console.log(data);
-
         return data;
 
     } catch (error) {
@@ -290,11 +257,8 @@ export const updateRoutineActivity = async (id, count, dur) => {
                 duration: dur
             })
         })
-
         const data = await resp.json();
-
         console.log(data);
-
         return data;
 
     } catch (error) {
@@ -311,13 +275,9 @@ export const deleteRoutineAct = async (id) => {
                 'Authorization': `Bearer ${token}`
             }
         })
-
         const data = resp.json()
-
         console.log(data)
-
         return data;
-
 
     } catch (error) {
         console.error(error)

@@ -1,3 +1,8 @@
+.logout {
+    color: aliceblue;
+    cursor: pointer;
+}
+
 .navBar {
     display: flex;
     align-items: center;
@@ -6,15 +11,7 @@
     padding-left: 1em;
     padding-right: 1em;
 }
-
-.logout {
-    color: aliceblue;
-    cursor: pointer;
-}
-
 .title {
-
-    color: rgb(226, 242, 249);
-    text-shadow: 2px 2px 4px #000000;
-
+    color: lightgray;
+    text-shadow: 5px 5px 5px #000000;
 }

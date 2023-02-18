@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import CreateRoutine from "../Components/CreateRoutine"
+import CreateAct from "../Components/CreateAct";
 
-const Create = ({ setUser }) => {
+const CreateActivity = ({ setUser }) => {
 
     const nameTheUser = () => {
         setUser(localStorage.getItem('user'))
@@ -9,9 +9,9 @@ const Create = ({ setUser }) => {
     useEffect(() => nameTheUser(), [])
     return (
         <div>
-            <CreateRoutine />
+            <CreateAct />
         </div>
     )
 }
 
-export default Create
+export default CreateActivity

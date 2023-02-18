@@ -1,17 +1,12 @@
 import { useState } from 'react'
 import { login } from "../Api.fetch"
-
 import { Navigate } from 'react-router-dom'
-
 
 const Login = ({ setUser, setToken, user }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-
-
     return (user ? <Navigate to='/user' /> :
         <div>
-
             <div>
                 <form className="login-form" onSubmit={async (event) => {
                     event.preventDefault()
@@ -32,9 +27,7 @@ const Login = ({ setUser, setToken, user }) => {
                     <input className="username"
                         placeholder="username.."
                         onChange={event => setUsername(event.target.value)}>
-
                     </input>
-
                     <input className="password"
                         type='password'
                         placeholder="password.."
@@ -45,10 +38,7 @@ const Login = ({ setUser, setToken, user }) => {
 
                 </form>
             </div>
-
         </div>
-
     )
 }
-
 export default Login

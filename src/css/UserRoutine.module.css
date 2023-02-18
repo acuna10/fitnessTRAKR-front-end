@@ -14,18 +14,18 @@
 }
 
 .titleBox {
-    background-color: rgb(226, 242, 249);
+    background-color: lightblue;
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 60vw;
     justify-content: center;
     border-style: solid;
     border-color: cornflowerblue;
     border-radius: 7px;
-    margin: .5em;
-    padding: .5em;
+    margin: 1em;
+    padding: 1em;
     box-shadow: 10px 10px 5px lightblue;
-    background-color: rgb(226, 242, 249);
+    background-color: lightcoral;
 }
 
 .routine {
@@ -35,18 +35,14 @@
     margin: .5em;
     padding: .5em;
     box-shadow: 10px 10px 5px lightblue;
-    background-color: rgb(226, 242, 249);
-
+    background-color: lightgray;
 }
-
 .activities:hover {
     background-color: cornflowerblue;
-    color: aliceblue;
-    border-color: rgb(226, 242, 249);
-
+    color: goldenrod;
+    border-color: burlywood;
     border-radius: 7px;
 }
-
 .activities {
     display: flex;
     justify-content: space-between;
@@ -71,7 +67,6 @@
     display: flex;
     justify-content: center;
 }
-
 .Link:hover {
     background-color: cornflowerblue;
     color: aliceblue;
@@ -83,10 +78,8 @@
     align-items: center;
     justify-content: space-between;
 }
-
 .routineChangers {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
 }

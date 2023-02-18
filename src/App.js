@@ -1,17 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
-import Edit from './routes/Edit';
-import Home from "./routes/Home";
-import RegisterPage from './routes/Register';
-import Login from './routes/Login'
-import RoutinePage from './routes/RoutinePage';
-import ActivityPage from './routes/ActivityPage'
-import UserHome from './routes/UserHome';
-import UserRoutines from './routes/UserRoutine';
+import Edit from './Routes/Edit';
+import Home from "./Routes/Home";
+import RegisterPage from './Routes/Register';
+import Login from './Routes/Login'
+import RoutinePage from './Routes/RoutinePage';
+import ActivityPage from './Routes/ActivityPage'
+import UserHome from './Routes/UserHome';
+import UserRoutines from './Routes/UserRoutine';
 import { useState } from 'react';
-import { NavBar } from './components/NavBar';
-import Create from './routes/Create';
-import AddActivity from './routes/AddActivity'
-import EditRoutineActivity from './routes/EditRoutineActivity';
+import { NavBar } from './Components/NavBar';
+import Create from './Routes/Create';
+import AddActivity from './Routes/AddActivity'
+import EditRoutineActivity from './Routes/EditRoutineActivity';
+import CreateActiviy from './Routes/CreateActivity';
 
 
 const App = () => {
@@ -47,12 +48,12 @@ const App = () => {
 
         <Route exact path={'/routines'} element={
           <RoutinePage
-            setUser={setUser} />}
+            setUser={setUser} user={user} />}
         />
 
         <Route path={'/activities'} element={
           <ActivityPage
-            setUser={setUser} />}
+            setUser={setUser} user={user} />}
         />
 
         <Route path={'/user'} element={
@@ -80,6 +81,10 @@ const App = () => {
 
         <Route path={'/routines-create'} element={
           <Create
+            setUser={setUser} />}
+        />
+        <Route path={'/activities-create'} element={
+          <CreateActiviy
             setUser={setUser} />}
         />
         <Route path={'/edit-routine'} element={
