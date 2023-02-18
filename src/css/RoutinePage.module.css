@@ -1,0 +1,28 @@
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.routine {
+    border-style: solid;
+    border-color: cornflowerblue;
+    border-radius: 7px;
+    margin: .5em;
+    padding: .5em;
+    box-shadow: 10px 10px 5px lightblue;
+    background-color: rgb(226, 242, 249);
+
+}
+
+.activities {
+    border-top: solid;
+    border-color: cornflowerblue;
+    margin-bottom: .5em;
+}
+
+.container {
+    height: 95vh;
+    overflow-y: scroll;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}

@@ -6,8 +6,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "babel-preset-react": "^6.24.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router": "^6.8.1",
+    "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -46,5 +49,9 @@
   "bugs": {
     "url": "https://github.com/DannyReese/fitnessTRAKR-front-end/issues"
   },
-  "homepage": "https://github.com/DannyReese/fitnessTRAKR-front-end#readme"
+  "homepage": "https://github.com/DannyReese/fitnessTRAKR-front-end#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
 }
